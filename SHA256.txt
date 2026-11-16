@@ -1,0 +1,2 @@
+7cd7a8d134b607769af7a71c5339eb837dd9491d4234655cc820b45b89cd555c  bin/MasivaSkin.exe
+a150cf31768764a9f73b781e82cd7dc13c242900bfe2aaf493c8c1fb5b8d1571  bin/MasivaSkinBridge.dll

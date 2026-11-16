@@ -1,0 +1,15 @@
+{
+  "source": "https://github.com/SteamDatabase/GameTracking-CS2/blob/04d3e4a67ac60168d0e79594c69a2116bb3b7278/game/csgo/pak01_dir/soundevents/game_sounds_player.vsndevts",
+  "sha256": "35b2ca5d4be176b7690a94521f8278a8456ff3b91142d7acf013d0af4cf89409",
+  "shared_voice_pairs": [
+    [
+      "Player.DamageFall",
+      "Player.DamageFall.Fem"
+    ],
+    [
+      "BaseGrenade.JumpThrowM",
+      "BaseGrenade.JumpThrowF"
+    ]
+  ],
+  "unique_agent_body_recordings": false
+}

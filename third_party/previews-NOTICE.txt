@@ -1,0 +1,9 @@
+Catalog thumbnails are derived from Steam economy images and CSGO-API assets.
+Image URLs, names, pinned metadata commit and output SHA256 values are recorded
+in data/previews.json. Metadata source: https://github.com/ByMykel/CSGO-API
+Commit: 72f932098c2fb1ddf647abcf22adee90ccffa088
+
+CSGO-API metadata license: catalog-LICENSE.txt (MIT).
+Counter-Strike game artwork belongs to Valve and the respective workshop
+contributors. The metadata license does not transfer ownership of that artwork.
+Images identify cosmetic selections; Masiva Skin is not affiliated with Valve.
