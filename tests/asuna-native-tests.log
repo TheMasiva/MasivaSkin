@@ -1,0 +1,306 @@
+Start testing: Nov 15 17:44 +03
+----------------------------------------------------------
+1/17 Testing: ProfileValidation
+1/17 Test: ProfileValidation
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaSkinTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"ProfileValidation" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Profile v1 compatibility and v2 StatTrak/name tag checks passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProfileValidation" end time: Nov 15 17:44 +03
+"ProfileValidation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/17 Testing: GameTransactions
+2/17 Test: GameTransactions
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaGameTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"GameTransactions" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+PASS exact module pair required before accepting any runtime patch version
+PASS StatTrak enable/change/disable/restore preserves unrelated attributes
+PASS holstered knife HUD reads require lifetime and original ownership
+PASS expired backup pruning retains live dropped originals
+PASS knife fallback backup survives model definition changes
+PASS every catalog firearm applies and restores its own fallback slot
+PASS rifle choice cannot write a different held rifle
+PASS glove snapshot is independent of active weapon
+PASS apply and restore exact original values
+PASS reapply preserves first backup
+PASS picked-up foreign and unknown weapons receive zero writes
+PASS own dropped weapon is eligible after pickup
+PASS controller association and unknown local identity fail closed
+PASS build mismatch has zero writes
+PASS dead player has zero writes
+PASS non AK weapon blocked
+PASS team mismatch blocked
+PASS wrong owner blocked
+PASS wrong identity layout blocked
+PASS partial write failure rolls back
+PASS weapon switch blocks stale restoration
+PASS process exit blocks restoration
+PASS game value conflict is not overwritten
+PASS invalid numeric input blocked
+PASS knife input blocked
+PASS missing restore backup rejected
+PASS identity change mid-write halts further writes
+PASS game correction no longer locks reapply
+PASS separate weapons have separate backups
+29 transaction checks passed
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"GameTransactions" end time: Nov 15 17:44 +03
+"GameTransactions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/17 Testing: InputValidation
+3/17 Test: InputValidation
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaInputTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"InputValidation" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+10 input checks passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"InputValidation" end time: Nov 15 17:44 +03
+"InputValidation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/17 Testing: RetentionAndCatalog
+4/17 Test: RetentionAndCatalog
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaRetentionTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"RetentionAndCatalog" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Retention lifecycle, retry budget and 2161 catalog entries passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RetentionAndCatalog" end time: Nov 15 17:44 +03
+"RetentionAndCatalog" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/17 Testing: DecorationsAgentsAndTeams
+5/17 Test: DecorationsAgentsAndTeams
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaExtrasTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"DecorationsAgentsAndTeams" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Team filters, agent isolation, decoration ABI, v3 profile and IPC passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"DecorationsAgentsAndTeams" end time: Nov 15 17:44 +03
+"DecorationsAgentsAndTeams" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/17 Testing: LocalKnifeKillfeed
+6/17 Test: LocalKnifeKillfeed
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaKillfeedTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"LocalKnifeKillfeed" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Kill feed local identity, event and model filtering passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"LocalKnifeKillfeed" end time: Nov 15 17:44 +03
+"LocalKnifeKillfeed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/17 Testing: LocalAgentVoices
+7/17 Test: LocalAgentVoices
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaVoiceTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"LocalAgentVoices" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Local voice filtering, legacy/modern semantic mapping and 63 agent banks passed
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"LocalAgentVoices" end time: Nov 15 17:44 +03
+"LocalAgentVoices" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/17 Testing: MenuInteractionPolicy
+8/17 Test: MenuInteractionPolicy
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaMenuTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"MenuInteractionPolicy" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Menu scope, editing, key validation and page boundaries passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"MenuInteractionPolicy" end time: Nov 15 17:44 +03
+"MenuInteractionPolicy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/17 Testing: BridgeStartupLifecycle
+9/17 Test: BridgeStartupLifecycle
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaStartupTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"BridgeStartupLifecycle" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+9 startup lifecycle cases passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"BridgeStartupLifecycle" end time: Nov 15 17:44 +03
+"BridgeStartupLifecycle" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/17 Testing: SharedTeamsAndTheme
+10/17 Test: SharedTeamsAndTheme
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaSharedTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"SharedTeamsAndTheme" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Both filters, atomic profile/IPC persistence, isolated restore and theme contrast passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SharedTeamsAndTheme" end time: Nov 15 17:44 +03
+"SharedTeamsAndTheme" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/17 Testing: GloveBackupLifetimes
+11/17 Test: GloveBackupLifetimes
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaGloveLifetimeTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"GloveBackupLifetimes" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+1000 glove lifetimes, same-life edits, reused addresses, side swaps and restore retention passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"GloveBackupLifetimes" end time: Nov 15 17:44 +03
+"GloveBackupLifetimes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/17 Testing: CollectionsAndUndo
+12/17 Test: CollectionsAndUndo
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaCollectionTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"CollectionsAndUndo" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Favorites persistence, isolated bounded undo, profile names and disk roundtrip passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"CollectionsAndUndo" end time: Nov 15 17:44 +03
+"CollectionsAndUndo" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/17 Testing: LocalizationFiltersAndUpdateMetadata
+13/17 Test: LocalizationFiltersAndUpdateMetadata
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaLocalizationTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"LocalizationFiltersAndUpdateMetadata" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Auto Float catalog/category/serialization checks: 9894 passed
+EN/TR labels, complete catalog coverage, combined filters and update metadata passed
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"LocalizationFiltersAndUpdateMetadata" end time: Nov 15 17:44 +03
+"LocalizationFiltersAndUpdateMetadata" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/17 Testing: RuntimeRefreshPolicy
+14/17 Test: RuntimeRefreshPolicy
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaRuntimePolicyTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"RuntimeRefreshPolicy" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Stable HUD simulation: 6000 -> 300 writes (95% fewer API submissions, not measured FPS).
+Changed rows and bounded missing-world recovery passed.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RuntimeRefreshPolicy" end time: Nov 15 17:44 +03
+"RuntimeRefreshPolicy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/17 Testing: DiscordPresenceStates
+15/17 Test: DiscordPresenceStates
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaPresenceTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"DiscordPresenceStates" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Presence states passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"DiscordPresenceStates" end time: Nov 15 17:44 +03
+"DiscordPresenceStates" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/17 Testing: ProfileBackupRotation
+16/17 Test: ProfileBackupRotation
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaBackupTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"ProfileBackupRotation" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Backup rotation, bounded history and restore passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ProfileBackupRotation" end time: Nov 15 17:44 +03
+"ProfileBackupRotation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+17/17 Testing: TeamPreviewOwnershipAndRefresh
+17/17 Test: TeamPreviewOwnershipAndRefresh
+Command: "/workspace/scratch/cff2f2ec8ee8/asuna-build/native/MasivaTeamPreviewTests"
+Directory: /workspace/scratch/cff2f2ec8ee8/asuna-build/native
+"TeamPreviewOwnershipAndRefresh" start time: Nov 15 17:44 +03
+Output:
+----------------------------------------------------------
+Local ownership, team scope, idle reuse, network reset and restore selection checks passed
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TeamPreviewOwnershipAndRefresh" end time: Nov 15 17:44 +03
+"TeamPreviewOwnershipAndRefresh" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Nov 15 17:44 +03

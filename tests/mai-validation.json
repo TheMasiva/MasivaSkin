@@ -1,0 +1,20 @@
+{
+  "native_test_groups": 16,
+  "native_result": "passed",
+  "windows_x64_compile": "passed with -Werror",
+  "gameplay_implementation": "unchanged from Siesta",
+  "live_cs2_test": false,
+  "windows_visual_test": false,
+  "windows_long_run_test": false,
+  "preview_cache_budget_mib": {
+    "decoded": 32,
+    "scaled": 24
+  },
+  "compact_ui": {
+    "embedded_pages": true,
+    "quick_loadout_integrated": true,
+    "independent_main_colour": true,
+    "layout_fit_tests": "passed",
+    "palette_contrast_tests": "passed"
+  }
+}

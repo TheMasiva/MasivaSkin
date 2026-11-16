@@ -1,0 +1,10 @@
+{
+  "client_sha256": "99a6720b29d8b477d55f0a2d7fd4333b5df13f354ba723804e996bead1231aa8",
+  "verified_function_prefixes": 42,
+  "scene_vtables": 3,
+  "item_getter_slots": 12,
+  "native_scene_builder": "0x793ac0",
+  "scene_callback": "0x781c00",
+  "scene_callback_slot": 146,
+  "live_visual_verification": false
+}

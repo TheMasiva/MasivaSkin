@@ -1,0 +1,11 @@
+0x1bb8f20: .?AVC_CSGO_TeamPreviewCharacterPosition@@ — inherited layout / callback verified
+0x1bb9608: .?AVC_CSGO_TeamSelectTerroristPosition@@ — inherited layout / callback verified
+0x1bb9cf0: .?AVC_CSGO_TeamSelectCounterTerroristPosition@@ — inherited layout / callback verified
+0x1bba3d8: .?AVC_CSGO_TeamIntroTerroristPosition@@ — inherited layout / callback verified
+0x1bbaac0: .?AVC_CSGO_TeamIntroCounterTerroristPosition@@ — inherited layout / callback verified
+0x1bbb1a8: .?AVCCSGO_WingmanIntroTerroristPosition@@ — inherited layout / callback verified
+0x1bbb890: .?AVCCSGO_WingmanIntroCounterTerroristPosition@@ — inherited layout / callback verified
+0x1bbbf78: .?AVCCSGO_RushIntroTerroristPosition@@ — inherited layout / callback verified
+0x1bbc660: .?AVCCSGO_RushIntroCounterTerroristPosition@@ — inherited layout / callback verified
+0x1c8dd88: .?AVC_CSGO_EndOfMatchCharacterPosition@@ — inherited layout / callback verified
+PASS: all 10 scene variants covered; 4 function prefixes match.

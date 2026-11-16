@@ -1,0 +1,19 @@
+{
+  "result": "passed",
+  "checks": [
+    "soundsystem(8).dll exact identity",
+    "engine2(7).dll exact identity",
+    "audio prefix 0x1d1d90",
+    "audio prefix 0x1c1fd0",
+    "audio prefix 0x1dab80",
+    "audio prefix 0x1dab90",
+    "audio prefix 0x509a0",
+    "audio prefix 0x4bea0",
+    "audio prefix 0x4bf80",
+    "operator-system start and dictionary virtual entries",
+    "virtual start synchronously copies playback descriptor",
+    "all descriptor fields through byte 0x28; hash and source distinct from GUID",
+    "new engine PatchVersion parser, destination and runtime identity gate prefixes"
+  ],
+  "live_game_test": false
+}
