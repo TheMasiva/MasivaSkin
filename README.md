@@ -4,10 +4,10 @@
 
 ### Counter-Strike 2 · Client-Side Cosmetic Customization
 
-**Windows x64 · English & Türkçe · External Overlay Menu**
+**Windows x64 · 6 Interface Languages · External Overlay Menu · The Kurumi Era (1.X)**
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-303040?style=flat-square&logo=windows)](https://github.com/TheMasiva/MasivaSkin/releases)
-[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20TR-6d4aff?style=flat-square)](#languages--diller)
+[![Languages](https://img.shields.io/badge/Languages-6%20Languages-6d4aff?style=flat-square)](#languages--diller)
 [![GitHub Releases](https://img.shields.io/badge/Downloads-GitHub%20Releases-8257e6?style=flat-square&logo=github)](https://github.com/TheMasiva/MasivaSkin/releases)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/V8ZGrrVwym)
 [![YouTube Teaser](https://img.shields.io/badge/YouTube-Watch%20Teaser-FF0033?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=d6i8fmS4o8g)
@@ -33,7 +33,7 @@
 ---
 
 <a id="languages--diller"></a>
-**Languages / Diller:** English (first) · [Türkçe](#turkce)
+**Languages / Diller:** English · Türkçe · Deutsch · Русский · Nederlands · Français · [Türkçe rehber](#turkce)
 
 > **About updates:** This README is the **permanent project guide**, not a changelog. For new features, compatibility updates, fixes, downloads and release-specific instructions, always read the **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** page.
 
@@ -47,6 +47,8 @@ The project is designed around **client-side appearance customization**. It is *
 
 > **Please read before installing:** This is third-party game modification software. It is not approved by Valve; using it can violate game/platform rules or lead to account restrictions. **No VAC, Trusted Mode, Trust Factor or account-safety guarantee is provided.**
 
+The **Kurumi Era** is the visual identity planned for the 1.X series: application icon, menu portrait, launcher and optional Discord Rich Presence artwork.
+
 ## Features
 
 | Area | What it offers |
@@ -56,16 +58,32 @@ The project is designed around **client-side appearance customization**. It is *
 | **Agents** | Configure supported agent appearances for T and CT individually. |
 | **Team loadouts** | Maintain separate **T / CT** selections; use **Both** for items shared by both teams where available. |
 | **Appearance details** | Customize applicable wear/float, paint seed, StatTrak and name tags; sticker and charm options depend on item/build support. |
-| **Visual previews** | Browse offline preview images included in the release archive. |
+| **Visual previews & Quick Inspect** | Browse offline preview images; enlarge an item image, zoom with the mouse wheel (50–250%), reset with `0`, and close with `Esc`. These are catalog images, not 3D inspection. |
 | **Overlay menu** | Open or hide the external Windows menu with a configurable keyboard shortcut (**Insert** by default). |
-| **Appearance settings** | Light/dark themes, custom accent color, English/Turkish interface. |
+| **Appearance settings** | Light/dark themes, custom accent color and six interface languages (Turkish, English, German, Russian, Dutch and French). |
 | **Loadout / Quick Loadout** | Preview T/CT items side by side, choose and load profiles, or reapply your current selections from the integrated Loadout page. |
 | **Profiles** | Save, preview and load `.masiva` files. Profile overwrites keep up to five rotating `.bak` backups with a restore action. |
 | **Recent skins & filters** | Revisit the latest 20 distinct successfully submitted selections; remove individual active filters using their chips. |
+| **Selected / Applied status** | See whether an item is merely selected in the editor or already part of the active loadout. “Applied” means loadout status, not independent confirmation of the in-game render. |
+| **Live skin details** | See draft float/wear, paint seed, supported float range and finish/variant information. Agent details show model/arms instead of irrelevant float values. |
+| **Search suggestions** | See up to six localized item/finish matches in the current category and team; use mouse or Down + Enter to select. |
+| **Keyboard & notifications** | Arrow/Enter navigation, `Ctrl+F` to search, `Ctrl+I` to inspect, `Ctrl+Enter` to apply and contextual notifications for saves/applies/restores/errors. |
 | **Compact pages & themes** | Loadout, Profiles, Recent Skins, Filters and customization tools open inside the main window. Choose preset or custom main/accent colours, opacity and menu size. |
 | **Restore All** | Clear active cosmetic overrides across the current T/CT session; immediately restore available originals, while holstered/unavailable items may be restored when equipped again. Saved profile files and favorites are not deleted. |
 | **Local team previews** | Where supported, the local player’s selected agent/gloves and the weapon held by the presentation scene may be reflected in team introductions or end-of-match presentations. Other players’ preview characters are not modified. |
 | **Diagnostics** | Connection status, compatibility feedback, application logs and diagnostic report export, including available team-preview callback counters and timings. |
+
+### Inspect, status & interface responsiveness
+
+- Open **Quick Inspect** using the item card action, the main preview image, or `Ctrl+I`. Zoom with the wheel, press `0` to reset and `Esc` to close. It enlarges the **packaged 2D preview**; it does not model real-time wear, stickers or game lighting.
+- **Selected** = currently edited choice. **Applied** = choice stored in the active team loadout (including loaded profiles); it may remain applied when another weapon is held. **This is not real-time CS2 renderer verification.**
+- Search suggestions and keyboard controls are designed not to interrupt typing into input fields. Notifications indicate whether a request is queued/sent or saved, not that a VAC-secure match is guaranteed.
+- Settings can optionally color the version text with the current accent color rather than the animated RGB effect. Short card hover transitions are retained while unnecessary full-window fades and flashes are removed.
+- Connection/status feedback differentiates **waiting for CS2**, **connected**, and **unsupported game build**. If a game build is unsupported, do not force compatibility.
+
+### Interface languages
+
+Choose **Türkçe, English, Deutsch, Русский, Nederlands or Français** in **Settings → General → Language**. New translations include menu terms and a catalog mapping for **2,224 weapon/finish records** across the four additional languages. Some secondary UI text may still fall back to English. Language dropdown visibility on smaller screens has been improved. **In-game HUD auto-language detection continues to use its existing Turkish/English behavior**, separate from the menu language.
 
 Additional HUD, killfeed and agent-audio functionality may be available in supported builds. These effects are **not guaranteed** for every game update or item; refer to the relevant release notes.
 
@@ -116,12 +134,18 @@ MasivaSkin/
 - Quit the game and app; extract the **new release into a fresh folder** instead of overwriting a mix of old/new files.
 - Import your saved profile with **Load profile** after starting the new build.
 - Read the new release notes for compatibility or profile-format notices.
+- **Compatibility hotfixes may update both the EXE and Bridge DLL.** Even when the UI looks identical, always keep both files from the same release.
 
 ## Quick usage reference
 
 | Control / option | Action |
 | --- | --- |
 | **Insert** | Show/hide the menu (default hotkey). |
+| **Ctrl+F** | Focus the skin search box. |
+| **Ctrl+I** | Open Quick Inspect for the selected item. |
+| **Ctrl+Enter** | Submit the active selection with Apply. |
+| **Arrow keys / Enter** | Navigate eligible cards and open an item preview; input fields keep normal editing keys. |
+| **0 / mouse wheel / Esc (Inspect)** | Reset zoom / zoom catalog preview / close inspection. |
 | **Menu key** | Change the menu shortcut; **Esc** cancels reassignment. |
 | **Automatic connection** | Waits for CS2, connects when ready, and exits after the watched game closes. |
 | **T / CT** | Configure each team's cosmetic selections and agents. |
@@ -134,7 +158,7 @@ MasivaSkin/
 | **Save profile / Load profile** | Save/load a `.masiva` cosmetic profile. |
 | **Menu & Theme Colour** | Choose independent main background and accent colours, theme preset, opacity and menu size. |
 | **Explore-menu.cmd** | Open `--preview` mode to inspect the menu without attaching to CS2. |
-| **Language** | Switch the interface between English and Turkish. |
+| **Language** | Choose Türkçe, English, Deutsch, Русский, Nederlands or Français in Settings → General → Language. |
 | **Settings** | Theme, accent color, language, menu key, opacity, size and diagnostics. |
 | **Log / diagnostics** | Inspect errors and save a diagnostic report. |
 | **Hide / Exit** | Hide the overlay or close the application. |
@@ -146,6 +170,11 @@ MasivaSkin/
 Interface preferences are generally stored in `Masiva-Skin.ini`, while cosmetic selections are saved in `.masiva` profiles. Discord Rich Presence is optional and disabled by default in this distribution. Windows native file/color pickers can still appear outside the main window.
 
 ## Known limitations
+
+- **Quick Inspect uses offline catalog artwork** and is not a live 3D model viewer; selected float/stickers and game lighting might not match the image.
+- **Applied denotes active loadout state**, not verified real-time rendering on every CS2 game build. No “Pending” indicator is promised.
+
+> Static module validation and automated tests are not a substitute for live game testing. Consult each release's validation notes for what was actually tested.
 
 - **CS2 updates can break compatibility.** A matching build/version check does not prove every cosmetic operation is working. Unsupported module identities or signatures should be treated as a reason to **stop**, not force an older build.
 - **The overlay requires borderless/windowed display.** Exclusive fullscreen is not supported.
@@ -246,6 +275,8 @@ The script configures an **x64 Release** build and runs the included tests. The 
 - The application is independent of Valve; Valve game DLLs are **not included** in the distributed package.
 - Use this software only where permitted by the game's terms and applicable rules. **No anti-cheat immunity, matchmaking access or account safety is guaranteed.**
 
+**Kurumi artwork:** The Kurumi-themed image remains subject to its creators’ rights; do not assume the source repository or this README grants third parties permission to reuse it. Public distribution requires appropriate rights.
+
 **Project:** [GitHub repository](https://github.com/TheMasiva/MasivaSkin) · **Updates:** [Releases](https://github.com/TheMasiva/MasivaSkin/releases) · **Community:** [Discord](https://discord.gg/V8ZGrrVwym) · **Videos:** [Official teaser](https://www.youtube.com/watch?v=d6i8fmS4o8g) / [Previous showcase](https://www.youtube.com/watch?v=JX4N9-Rs1TE)
 
 ---
@@ -263,6 +294,8 @@ Amaç **yerel görünüm özelleştirmesidir**. Steam envanterine eşya eklemez,
 
 > **Kurulumdan önce:** Bu, Valve tarafından onaylanmayan üçüncü taraf bir oyun modifikasyonudur. Kullanımı oyun/platform kurallarını ihlal edebilir veya hesap kısıtlamalarına yol açabilir. **VAC, Trusted Mode, Trust Factor ya da hesap güvenliği garantisi yoktur.**
 
+**Kurumi Dönemi**, 1.X serisinin planlanan ortak görsel kimliğidir: program simgesi, menü portresi, launcher ve isteğe bağlı Discord Rich Presence görseli.
+
 ## Özellikler
 
 | Bölüm | Açıklama |
@@ -272,16 +305,32 @@ Amaç **yerel görünüm özelleştirmesidir**. Steam envanterine eşya eklemez,
 | **Ajanlar** | T ve CT için ayrı ajan görünümü seçimleri. |
 | **Takım ayarları** | Ayrı **T / CT** kayıtları; uygun ortak eşyalar için **Both**. |
 | **Kozmetik ayrıntıları** | Desteklenen eşyalarda float/wear, seed, StatTrak, NameTag, sticker ve charm seçenekleri. |
-| **Görsel önizlemeler** | ZIP paketine dahil çevrimdışı skin görselleri. |
+| **Görsel önizleme / Quick Inspect** | ZIP içindeki katalog görsellerini büyütme, fareyle %50–250 yakınlaştırma, `0` ile sıfırlama ve `Esc` ile kapatma. Canlı 3D inceleme değildir. |
 | **Harici menü** | Varsayılan **Insert** tuşuyla açılıp kapanan, tuşu değiştirilebilir Windows overlay. |
-| **Görünüm ve dil** | Siyah/beyaz tema, özel vurgu rengi, Türkçe/İngilizce. |
+| **Görünüm ve dil** | Siyah/beyaz tema, özel vurgu rengi ve altı arayüz dili (Türkçe, İngilizce, Almanca, Rusça, Hollandaca, Fransızca). |
 | **Loadout / Quick Loadout** | T/CT görsellerini yan yana inceleme; entegre Loadout sayfasından profil seçme/yükleme ve mevcut kombinasyonu yeniden uygulama. |
 | **Profiller** | `.masiva` profillerini kaydetme, resimli önizleme ve yükleme. Profilin üzerine yazıldığında `.bak1`–`.bak5` yedekleri ve geri yükleme seçeneği. |
 | **Son kullanılanlar / filtreler** | Başarıyla gönderilen son 20 farklı skin seçimi; aktif filtre etiketlerini ayrı ayrı kaldırma. |
+| **Selected / Applied durumları** | Düzenleyicide yalnızca seçilen görünüm ile aktif Loadout’a kaydedilmiş seçim ayrı gösterilir. `Applied`, oyundaki görüntünün ayrıca doğrulandığı anlamına gelmez. |
+| **Canlı skin ayrıntıları** | Seçilen float/wear, seed, desteklenen float aralığı, skin varyantı; ajanlarda gereksiz float yerine model/kol bilgisi. |
+| **Arama önerileri** | Seçilen takım ve kategoriye göre en fazla altı yerelleştirilmiş silah/skin önerisi. |
+| **Klavye ve bildirimler** | Ok/Enter gezinmesi, `Ctrl+F`, `Ctrl+I`, `Ctrl+Enter` kısayolları ve kaydetme/uygulama/geri alma/hata bildirimleri. |
 | **Kompakt menü ve temalar** | Loadout, Profiles, Recent Skins, Filters ve özelleştirme sayfaları ana pencerenin içinde açılır. Hazır paletler veya ayrı ana zemin/vurgu renkleri, opaklık ve boyut ayarları. |
 | **Restore All / Tümünü geri al** | Oturumdaki T/CT kozmetik değişikliklerini temizler; hazır özgün verileri geri yükler, elde olmayan eşyaların geri yüklenmesi yeniden kuşanmaya kalabilir. Kayıtlı profil ve favoriler silinmez. |
 | **Yerel takım tanıtımı** | Desteklenen sahnelerde yalnızca yerel oyuncunun tanıtım karakteri için ajan, eldiven ve sahnenin tuttuğu silah görünümü kullanılabilir. Başka oyuncuların tanıtım modelleri değiştirilmez. |
 | **Tanılama** | Bağlantı/uyumluluk durumları, loglar ve mevcutsa Team Preview sayaçları ile sürelerini içeren tanı raporu. |
+
+### İnceleme, durumlar ve arayüz
+
+- **Quick Inspect**, skin kartındaki inceleme düğmesi, büyük görsel veya `Ctrl+I` ile açılır. Fare tekerleğiyle yakınlaştır, `0` ile sıfırla, `Esc` ile kapat. Görsel **paket içindeki 2D katalog resmidir**; oyunun canlı 3D görüntüsü, float veya sticker simülasyonu değildir.
+- **Selected** = şu an düzenlediğin seçim. **Applied** = profil dahil aktif takım Loadout’unda kayıtlı görünüm; elinde başka silah olsa da Applied kalabilir. **Oyundaki renderin doğrulandığı anlamına gelmez.**
+- Arama önerileri mevcut takım/kategoriye uyum sağlar. Kısayollar, metin kutularında doğal yazma davranışını engellememelidir. Bildirimler işlemin gönderilmesini/kaydedilmesini gösterir; VAC güvenliği iddiası değildir.
+- Sürüm yazısı isteğe bağlı olarak tema vurgu rengini kullanabilir; gereksiz tam pencere solması ve seçim flaşı kaldırılmış, kısa kart hover efekti korunmuştur.
+- Durum çubuğu **CS2 bekleniyor**, **bağlandı** ve **desteklenmeyen oyun derlemesi** durumlarını ayırır. Desteklenmeyen sürümü zorlamayın.
+
+### Arayüz dilleri
+
+**Ayarlar → Genel → Dil** bölümünden **Türkçe, English, Deutsch, Русский, Nederlands veya Français** seçebilirsin. Eklenen dört dilde **2.224 silah/kaplama kaydı** için katalog adı eşleştirmeleri bulunur. Bazı ikincil menü metinleri İngilizceye dönebilir. Dil açılır listesinin küçük ekranlardaki görünürlüğü iyileştirildi. **Oyun içi HUD dil algılaması** ise arayüzden bağımsız olarak mevcut Türkçe/İngilizce davranışını kullanır.
 
 Uyumlu derlemelerde HUD, killfeed ve ajan sesleriyle ilgili ek özellikler bulunabilir. Bunların hepsi her oyun güncellemesinde veya her eşya için **garanti edilmez**; sürüme özel bilgiler Releases bölümündedir.
 
@@ -332,12 +381,18 @@ MasivaSkin/
 - CS2 ve uygulamayı kapat; yeni sürümü **temiz bir klasöre** çıkar.
 - **Load profile** ile kaydettiğin profili geri yükle.
 - Yeni sürümün Release notlarındaki uyumluluk ve profil bilgilerini kontrol et.
+- **Uyumluluk hotfix sürümleri hem EXE dosyasını hem Bridge DLL'i değiştirebilir.** Menü aynı görünse bile iki dosya aynı Release'ten gelmeli.
 
 ## Hızlı kullanım tablosu
 
 | Kontrol | Ne yapar? |
 | --- | --- |
 | **Insert** | Varsayılan menü açma/kapatma tuşu. |
+| **Ctrl+F** | Skin arama alanına odaklanır. |
+| **Ctrl+I** | Seçili eşyanın Quick Inspect önizlemesini açar. |
+| **Ctrl+Enter** | Seçimi Apply ile gönderir. |
+| **Yön tuşları / Enter** | Kartlarda gezinme ve önizleme; metin alanlarında doğal yazma davranışı korunur. |
+| **0 / tekerlek / Esc (Inspect)** | Yakınlaştırmayı sıfırlama / yakınlaştırma / önizlemeyi kapatma. |
 | **Menu key** | Menü tuşunu değiştir; **Esc** işlemi iptal eder. |
 | **Otomatik bağlantı** | CS2 açılmasını bekler, hazır olduğunda bağlanır ve takip edilen oyun kapandığında çıkar. |
 | **T / CT** | Takımlara özel skin ve ajan seçimleri. |
@@ -350,7 +405,7 @@ MasivaSkin/
 | **Save profile / Load profile** | `.masiva` profili kaydeder/yükler. |
 | **Menu & Theme Colour** | Bağımsız ana zemin ve vurgu renkleri, tema paleti, opaklık ve menü boyutu. |
 | **Explore-menu.cmd** | Oyun bağlantısı olmadan `--preview` modunda menüyü açar. |
-| **Language** | İngilizce / Türkçe dili değiştirir. |
+| **Language** | Ayarlar → Genel → Dil: Türkçe, English, Deutsch, Русский, Nederlands veya Français. |
 | **Ayarlar** | Tema, vurgu rengi, dil, menü tuşu, opaklık, boyut ve tanılama. |
 | **Log / diagnostics** | Hata ayrıntıları ve tanı raporu. |
 | **Hide / Exit** | Menüyü gizler / uygulamadan çıkar. |
@@ -362,6 +417,11 @@ MasivaSkin/
 Menü teması ve tuş gibi ayarlar genellikle `Masiva-Skin.ini` dosyasında, kozmetik seçimler `.masiva` profilinde tutulur. Bu dağıtımda Discord Rich Presence varsayılan kapalıdır. Standart Windows dosya/renk seçicileri ana pencere dışında açılabilir.
 
 ## Bilinen sınırlamalar
+
+- **Quick Inspect çevrimdışı katalog görseli kullanır**; oyun içi gerçek 3D görünüm, float/sticker ve aydınlatmayla birebir aynı olmayabilir.
+- **Applied aktif Loadout durumudur**; her CS2 sürümünde görünümün gerçekten çizildiğine dair doğrulama değildir. `Pending` göstergesi vaat edilmez.
+
+> Statik modül doğrulaması ve otomatik testler canlı oyun testinin yerine geçmez. Hangi kontrollerin gerçekten yapıldığını ilgili sürümün doğrulama notlarından öğren.
 
 - **CS2 güncellemeleri uyumluluğu bozabilir.** Build numarasının eşleşmesi bütün görsel işlemlerin çalıştığını kanıtlamaz. Desteklenmeyen modül kimliği/imza durumunda **uygulamayı zorlamayın**.
 - **Overlay yalnızca pencereli modlarda** desteklenir; Exclusive Fullscreen'de görünmeyebilir.
@@ -461,6 +521,8 @@ Betik **x64 Release** derlemesini hazırlar ve testleri çalıştırır. Derleme
 - Üçüncü taraf bağımlılıkların bildirimleri [`third_party/`](third_party/) veya Release içindeki `THIRD-PARTY-NOTICES/` klasöründedir. Bu bileşenler kendi lisanslarına tabidir. Metadata lisansları Valve/Workshop görsellerinin telif haklarını devretmez.
 - Masiva Skin, Valve'dan bağımsızdır. Valve'ın oyun DLL dosyaları Release paketine **dahil edilmez**.
 - Programı yalnızca oyun/platform kuralları izin veriyorsa kullan. **Anti-cheat bağışıklığı, eşleştirme erişimi veya hesap güvenliği garantisi verilmez.**
+
+**Kurumi görseli:** Kurumi temalı görsel ilgili hak sahiplerinin haklarına tabidir; bu repo, üçüncü kişilere görseli yeniden kullanma izni vermez. Herkese açık dağıtım için gerekli kullanım hakları ayrıca değerlendirilmelidir.
 
 **Proje:** [GitHub](https://github.com/TheMasiva/MasivaSkin) · **Güncellemeler:** [Releases](https://github.com/TheMasiva/MasivaSkin/releases) · **Topluluk:** [Discord](https://discord.gg/V8ZGrrVwym) · **Videolar:** [Yeni tanıtım](https://www.youtube.com/watch?v=d6i8fmS4o8g) / [Önceki tanıtım](https://www.youtube.com/watch?v=JX4N9-Rs1TE)
 
