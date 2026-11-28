@@ -4,15 +4,16 @@
 
 ### Counter-Strike 2 · Client-Side Cosmetic Customization
 
-**Windows x64 · 6 Interface Languages · External Overlay Menu · The Kurumi Era (1.X)**
+**Windows x64 · 6 Interface Languages · Windows Setup & Signed Updates · The Kurumi Era (1.X)**
 
 [![Windows x64](https://img.shields.io/badge/Windows-x64-303040?style=flat-square&logo=windows)](https://github.com/TheMasiva/MasivaSkin/releases)
 [![Languages](https://img.shields.io/badge/Languages-6%20Languages-6d4aff?style=flat-square)](#languages--diller)
-[![GitHub Releases](https://img.shields.io/badge/Downloads-GitHub%20Releases-8257e6?style=flat-square&logo=github)](https://github.com/TheMasiva/MasivaSkin/releases)
+[![GitHub Releases](https://img.shields.io/badge/Downloads-Windows%20Setup-8257e6?style=flat-square&logo=github)](https://github.com/TheMasiva/MasivaSkin/releases)
+[![Auto Updates](https://img.shields.io/badge/Updates-Signed%20Auto%20Updates-39b87f?style=flat-square)](https://github.com/TheMasiva/MasivaSkin/releases)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/V8ZGrrVwym)
 [![YouTube Teaser](https://img.shields.io/badge/YouTube-Watch%20Teaser-FF0033?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=d6i8fmS4o8g)
 
-**[📦 Downloads](https://github.com/TheMasiva/MasivaSkin/releases) · [🎬 Official Teaser](https://www.youtube.com/watch?v=d6i8fmS4o8g) · [💬 Discord Community](https://discord.gg/V8ZGrrVwym) · [🛠 Troubleshooting](#troubleshooting) · [🇹🇷 Türkçe](#turkce)**
+**[📦 Windows Setup & Releases](https://github.com/TheMasiva/MasivaSkin/releases) · [🎬 Official Teaser](https://www.youtube.com/watch?v=d6i8fmS4o8g) · [💬 Discord Community](https://discord.gg/V8ZGrrVwym) · [🛠 Troubleshooting](#troubleshooting) · [🇹🇷 Türkçe](#turkce)**
 
 *An independent, unofficial project. Not affiliated with or endorsed by Valve Corporation.*
 
@@ -35,7 +36,7 @@
 <a id="languages--diller"></a>
 **Languages / Diller:** English · Türkçe · Deutsch · Русский · Nederlands · Français · [Türkçe rehber](#turkce)
 
-> **About updates:** This README is the **permanent project guide**, not a changelog. For new features, compatibility updates, fixes, downloads and release-specific instructions, always read the **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** page.
+> **About updates:** Starting with the installed **v1.0.1** release, Masiva Skin supports signed update checks at launch. This README is the **permanent project guide**, not a changelog. For new features, compatibility updates, fixes, downloads and release-specific instructions, always read the **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** page.
 
 # 🇬🇧 English
 
@@ -72,6 +73,9 @@ The **Kurumi Era** is the visual identity planned for the 1.X series: applicatio
 | **Restore All** | Clear active cosmetic overrides across the current T/CT session; immediately restore available originals, while holstered/unavailable items may be restored when equipped again. Saved profile files and favorites are not deleted. |
 | **Local team previews** | Where supported, the local player’s selected agent/gloves and the weapon held by the presentation scene may be reflected in team introductions or end-of-match presentations. Other players’ preview characters are not modified. |
 | **Diagnostics** | Connection status, compatibility feedback, application logs and diagnostic report export, including available team-preview callback counters and timings. |
+| **Windows installer** | Install with `MasivaSkinSetup.exe` into `%LOCALAPPDATA%\MasivaSkin`, with desktop/Start Menu shortcuts; no administrator privileges normally required. |
+| **Signed automatic updates** | On launch, check the latest stable GitHub Release, verify the signed update metadata and the setup file hash, and offer a compatible update when CS2 is closed. |
+| **Launcher settings** | Launch CS2 through Steam; configure General (hide on launch, optional Discord Rich Presence, language) and In Game Window (opacity, size, accent, theme). |
 
 ### Inspect, status & interface responsiveness
 
@@ -104,37 +108,60 @@ Videos demonstrate the project; the **[release notes](https://github.com/TheMasi
 
 ## Download & installation
 
-1. Open **[Releases](https://github.com/TheMasiva/MasivaSkin/releases)** and select the build you want to install. **Read its release notes** to check which CS2 version it supports.
-2. Download the **Windows x64 ZIP** from **Assets** (not GitHub's automatic *Source code* ZIP).
-3. **Close CS2 and Masiva Skin completely** before installing or replacing files.
-4. Extract the **entire ZIP** into a new local folder. **Never mix an EXE and bridge DLL from different releases.**
-5. Keep the files and `previews/` directory in their original relative locations.
-6. Run `MasivaSkin.exe`. If CS2 is not running, the app offers **Launch CS2** through Steam; if it is running, the app proceeds to the menu and attempts to connect. Use **Fullscreen Windowed / Borderless** or Windowed mode for the overlay.
-7. Select a team, category, item and finish, then choose **Apply**. Use **Save profile** to keep your selections.
+### Recommended: Windows Setup (v1.0.1 and later)
 
-A typical **release ZIP** contains:
+1. Visit **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)**. Read the latest **stable** release notes, including its supported CS2 build and known limitations.
+2. Under **Assets**, download **`MasivaSkinSetup.exe`**. Do **not** use GitHub's automatically generated *Source code* ZIP as an installer. Download only from this project's official release page.
+3. **Close CS2 and any older Masiva Skin version**, then run the setup file normally. It installs for your Windows account; administrator elevation is not normally required.
+4. Setup installs the application under `%LOCALAPPDATA%\MasivaSkin\App` and creates desktop and Start Menu shortcuts.
+5. On the **first installation**, setup can offer to import settings and profiles from an older portable folder. Select that folder's `Masiva-Skin.ini` if you want to migrate; see the next section.
+6. Open Masiva Skin using its shortcut. The launcher checks for a newer signed release at startup. You can use **Launch CS2** (through Steam, preserving your existing Steam launch options) or **Explore menu** to preview the interface without starting CS2.
+7. For the in-game overlay, use **Fullscreen Windowed (Borderless)** or **Windowed** display mode. Select your team, item and finish; press **Apply** and save a profile if needed.
 
-```text
-MasivaSkin/
-├── MasivaSkin.exe
-├── MasivaSkinBridge.dll
-├── Masiva-Skin.ini
-├── Explore-menu.cmd             # Optional UI preview, no game required
-├── previews/
-├── README.md
-├── SHA256.txt                 # If supplied with the release
-└── THIRD-PARTY-NOTICES/       # If supplied with the release
-```
+> **First-time migration:** Existing portable v1.0.0 and older installations do **not** acquire automatic updating on their own. Run the v1.0.1-or-newer Windows installer **once** to move to the installed update system. A separate legacy portable build, if distributed, must be updated manually according to its own release notes.
 
-> Extract first: running directly inside a ZIP or copying only `MasivaSkin.exe` can cause missing images, DLL errors or missing configuration.
+### Importing profiles and settings from a portable version
 
-### Updating to a new release
+- When prompted on first install, select the old portable installation's **`Masiva-Skin.ini`**, not an individual `.masiva` profile.
+- Setup copies available settings, favorites, recent selections and files in the old `profiles/` folder into the new `UserData` directory. Existing destination files are **not overwritten**; your old folder is **not deleted**.
+- A `.masiva` profile stored elsewhere can be imported manually using **Profiles → Load profile**.
+- Keep a separate backup of valuable profiles, settings and `.bak1`–`.bak5` profile history before migrating.
 
-- Back up any `.masiva` profiles and existing settings you want to keep. Overwrites of saved profiles can produce rotating `.bak1`–`.bak5` files; keep an external copy before upgrading.
-- Quit the game and app; extract the **new release into a fresh folder** instead of overwriting a mix of old/new files.
-- Import your saved profile with **Load profile** after starting the new build.
-- Read the new release notes for compatibility or profile-format notices.
-- **Compatibility hotfixes may update both the EXE and Bridge DLL.** Even when the UI looks identical, always keep both files from the same release.
+### Automatic updates: how they work
+
+- On launch, the installed app checks the **latest stable GitHub Release** for `update.txt` and `update.sig`. The metadata is checked against the **public verification key built into the application** (RSA-3072 / SHA-256).
+- If a newer version is available and **CS2 is closed**, it downloads the matching `MasivaSkinSetup.exe` and checks its **SHA256** against the signed update metadata before starting the installation.
+- The old program closes; the installer waits for it to exit and updates the program files. **Personal settings and profiles remain in `UserData`**. CS2 must also remain closed while setup runs.
+- If the update server is unavailable, verification fails or the download is interrupted, the current version remains in place. **Updates are checked on launch, not continuously in the background.** If CS2 is already running, the update is postponed until a later launch.
+- This signing system validates the project's update metadata and downloaded installer. It is **not a Windows Authenticode certificate**, and it does **not** guarantee anti-cheat safety or eliminate SmartScreen warnings.
+
+### Installation folders and uninstalling
+
+| Location | Contents |
+| --- | --- |
+| `%LOCALAPPDATA%\MasivaSkin\App` | Installed application, matching Bridge DLL, packaged previews and resources. |
+| `%LOCALAPPDATA%\MasivaSkin\UserData` | Your settings, profiles, favorites, recent selections and update log. |
+| `%LOCALAPPDATA%\MasivaSkin\Updates` | Downloaded update installers. |
+| `%LOCALAPPDATA%\MasivaSkin\Previous` | Previous installation backup used by the update process. |
+
+To uninstall, use **Windows Settings → Apps → Installed apps → Masiva Skin → Uninstall** (wording varies by Windows version). The uninstaller deliberately **preserves `UserData`**. You may remove it manually only after backing up anything you want to keep. The maintenance executable may remain until manually cleaned up.
+
+### Maintainers: publishing a signed update
+
+For each **new stable** release (for example `v1.0.2`):
+
+1. Update the version in the program, build files, installer resources and documentation; build and test the new Windows x64 application and **`MasivaSkinSetup.exe`**.
+2. Sign the **final, unchanged installer** with the **same private signing key** used for v1.0.1. From the source directory, with Python and the `cryptography` package installed, for example:
+
+   ```powershell
+   python tools/sign_release.py 1.0.2 MasivaSkinSetup.exe update-signing-key.pem release-1.0.2
+   ```
+
+3. Push the corresponding source code, create the **`v1.0.2`** GitHub Release, mark it **Latest** (not draft/pre-release), and upload these **three separate assets with these exact names**: `MasivaSkinSetup.exe`, `update.txt`, `update.sig`. An additional `SHA256.txt` is optional for manual verification.
+4. Do **not** alter the installer after signing it. Preserve the same signing key across updates; never publish the **private key**, its ZIP backup, or a PEM file. Only the public key belongs in the application/source.
+5. Before announcing the release, test a real **installed v1.0.1 → v1.0.2** upgrade on Windows, including profile persistence and recovery from a failed update.
+
+The updater expects GitHub assets at `releases/latest/download/update.txt`, `releases/latest/download/update.sig`, and `releases/download/vX.Y.Z/MasivaSkinSetup.exe`. Source code files under `src/`, `tools/` or `tests/` are useful for development but **are not downloaded or built by the updater**. The private signing key must never be committed, even temporarily.
 
 ## Quick usage reference
 
@@ -157,7 +184,9 @@ MasivaSkin/
 | **Recent skins** | Choose from the last 20 distinct successfully submitted selections; selecting one does not automatically apply it. |
 | **Save profile / Load profile** | Save/load a `.masiva` cosmetic profile. |
 | **Menu & Theme Colour** | Choose independent main background and accent colours, theme preset, opacity and menu size. |
-| **Explore-menu.cmd** | Open `--preview` mode to inspect the menu without attaching to CS2. |
+| **Explore menu (launcher)** | Preview the menu without launching CS2. Legacy portable distributions may include `Explore-menu.cmd`. |
+| **Launcher → General** | Hide on launch, optional Discord Rich Presence sharing, and application language. |
+| **Launcher → In Game Window** | Set the in-game menu opacity, size, accent colour and theme. |
 | **Language** | Choose Türkçe, English, Deutsch, Русский, Nederlands or Français in Settings → General → Language. |
 | **Settings** | Theme, accent color, language, menu key, opacity, size and diagnostics. |
 | **Log / diagnostics** | Inspect errors and save a diagnostic report. |
@@ -167,7 +196,7 @@ MasivaSkin/
 
 **Both mode:** Only supported items shared by both teams are eligible. Merely switching to Both does not apply changes; use **Apply** or save the profile. Changes to the other side may appear when its item is next equipped. Agents and team-exclusive weapons are configured separately.
 
-Interface preferences are generally stored in `Masiva-Skin.ini`, while cosmetic selections are saved in `.masiva` profiles. Discord Rich Presence is optional and disabled by default in this distribution. Windows native file/color pickers can still appear outside the main window.
+In the installed edition, interface preferences (`Masiva-Skin.ini`) and `.masiva` profiles are stored under `%LOCALAPPDATA%\MasivaSkin\UserData`, separately from program files. Discord Rich Presence is optional and can be configured in Launcher → General. Windows native file/color pickers can still appear outside the main window.
 
 ## Known limitations
 
@@ -239,6 +268,14 @@ Check [Releases](https://github.com/TheMasiva/MasivaSkin/releases) for a compati
 
 Close Masiva Skin and verify that CS2 works normally without it. Confirm files belong to one release, avoid combining multiple game-modifying tools, and review Windows Event Viewer plus the application's diagnostic report. If the game crashes repeatedly, **stop testing that build** until the cause is understood.
 
+### 7. The automatic update check fails or an update is postponed
+
+- Make sure you are running the **installed v1.0.1-or-newer edition**, not an older portable build. Confirm that the latest stable release contains the exact assets `update.txt`, `update.sig` and `MasivaSkinSetup.exe`.
+- Check that GitHub is reachable; an offline or failed update check should leave the installed version usable. Do not turn off Windows security protections to force an update.
+- Fully close **CS2 and Masiva Skin**, then relaunch the app to retry. The updater does not install while CS2 is open.
+- If a downloaded update fails signature or SHA256 checks, **do not bypass the verification**. Download the official setup manually from the release page and report the failure through Discord or GitHub Issues.
+- If a setup fails, look at `%LOCALAPPDATA%\MasivaSkin\UserData\update.log` when available. The installer may keep a previous application copy, but a crash after the new app starts is **not** automatically detected by a health check.
+
 ### Reporting a bug
 
 Use [GitHub Issues](https://github.com/TheMasiva/MasivaSkin/issues) (if available), or the **bug-report/support channels on our [Discord server](https://discord.gg/V8ZGrrVwym)**. Include:
@@ -259,17 +296,17 @@ From the source root:
 build-windows.cmd
 ```
 
-The script configures an **x64 Release** build and runs the included tests. The current build script and release-specific documentation are authoritative if the process changes. Passing automated tests does **not** guarantee live CS2 compatibility.
+The script configures an **x64 Release** build and runs the included tests; consult the release-specific build instructions for packaging the installed Setup executable. **Building is not the same as signing an update:** `tools/sign_release.py` requires the private signing key, which must remain outside the public repository. Passing automated tests does **not** guarantee live CS2 compatibility or an end-to-end installer/update test.
 
 ## Integrity, licenses & disclaimer
 
-- When a release provides a `.sha256` file, verify the downloaded ZIP with PowerShell:
+- For the installed edition, verify the **Setup EXE** against the release's published SHA256 (or its `SHA256.txt`) using PowerShell:
 
   ```powershell
-  Get-FileHash .\YOUR_DOWNLOADED_RELEASE.zip -Algorithm SHA256
+  Get-FileHash .\MasivaSkinSetup.exe -Algorithm SHA256
   ```
 
-  Compare the value with the matching published checksum. It confirms file integrity relative to that checksum, **not that the software is safe or Valve-approved**.
+  Compare the value with the checksum published for **that exact release**. A matching hash supports file integrity relative to that checksum; it is **not proof of malware safety, VAC compatibility or Valve approval**.
 - **Source licensing:** The project's original source code is currently published **without a project license** (`No license`). Public repository visibility does not grant permission to copy, modify, redistribute or reuse it beyond rights provided by law or the platform's terms. A project license may be added later.
 - Source attribution and notices for third-party dependencies remain in [`third_party/`](third_party/) or the release's `THIRD-PARTY-NOTICES/` folder. Those components retain their own licenses. Third-party metadata licenses do **not** transfer ownership of Valve or Workshop artwork.
 - The application is independent of Valve; Valve game DLLs are **not included** in the distributed package.
@@ -284,7 +321,7 @@ The script configures an **x64 Release** build and runs the included tests. The 
 <a id="turkce"></a>
 # 🇹🇷 Türkçe
 
-> **Güncellemeler hakkında:** Bu README, her sürümde değiştirilmesi gerekmeyen **kalıcı kullanım kılavuzudur**. Yeni özellikler, hotfix'ler, desteklenen CS2 sürümleri ve indirmeler için **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** bölümüne bakın.
+> **Güncellemeler hakkında:** Kurulu **v1.0.1** sürümünden itibaren Masiva Skin açılışta imzalı güncellemeleri kontrol edebilir. Bu README, her sürümde değiştirilmesi gerekmeyen **kalıcı kullanım kılavuzudur**. Yeni özellikler, hotfix'ler, desteklenen CS2 sürümleri ve indirmeler için **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** bölümüne bakın.
 
 ## Masiva Skin nedir?
 
@@ -319,6 +356,9 @@ Amaç **yerel görünüm özelleştirmesidir**. Steam envanterine eşya eklemez,
 | **Restore All / Tümünü geri al** | Oturumdaki T/CT kozmetik değişikliklerini temizler; hazır özgün verileri geri yükler, elde olmayan eşyaların geri yüklenmesi yeniden kuşanmaya kalabilir. Kayıtlı profil ve favoriler silinmez. |
 | **Yerel takım tanıtımı** | Desteklenen sahnelerde yalnızca yerel oyuncunun tanıtım karakteri için ajan, eldiven ve sahnenin tuttuğu silah görünümü kullanılabilir. Başka oyuncuların tanıtım modelleri değiştirilmez. |
 | **Tanılama** | Bağlantı/uyumluluk durumları, loglar ve mevcutsa Team Preview sayaçları ile sürelerini içeren tanı raporu. |
+| **Windows kurucusu** | `MasivaSkinSetup.exe` ile `%LOCALAPPDATA%\MasivaSkin` klasörüne kurulum, masaüstü/Başlat kısayolları; normalde yönetici yetkisi gerekmez. |
+| **İmzalı otomatik güncelleme** | Açılışta GitHub’daki en son kararlı Release’i denetleme; güncelleme bilgisi imzasını ve kurucu SHA256 değerini doğrulama. CS2 açıksa kurulum ertelenir. |
+| **Launcher ayarları** | Steam üzerinden CS2 başlatma; General (açılışta gizle, isteğe bağlı Discord Rich Presence, dil) ve In Game Window (opaklık, boyut, vurgu, tema) seçenekleri. |
 
 ### İnceleme, durumlar ve arayüz
 
@@ -351,37 +391,60 @@ Videolar projeyi tanıtır. **Güncel özellikler ve CS2 uyumluluğu** için her
 
 ## İndirme ve kurulum
 
-1. **[Releases](https://github.com/TheMasiva/MasivaSkin/releases)** sayfasından kurmak istediğin sürümü seç. Önce sürüm açıklamasındaki **CS2 uyumluluk** notlarını oku.
-2. **Assets** altındaki **Windows x64 ZIP** dosyasını indir. GitHub'ın otomatik oluşturduğu *Source code* ZIP'ini uygulama paketi sanma.
-3. Dosyaları kurmadan/değiştirmeden önce **CS2 ve Masiva Skin'i tamamen kapat**.
-4. ZIP'in **tamamını yeni bir yerel klasöre çıkar**. **Farklı sürümlerin EXE ve DLL dosyalarını karıştırma.**
-5. EXE, köprü DLL'i, ayar dosyası ve `previews/` klasörünün paket içindeki dizilimini koru.
-6. `MasivaSkin.exe` uygulamasını çalıştır. CS2 kapalıysa **Launch CS2** düğmesiyle Steam üzerinden açabilirsin; açıksa uygulama menüye geçip bağlanmayı dener. Overlay için **Pencereli Tam Ekran (Borderless)** veya **Pencereli** kullan.
-7. Takım → kategori → eşya → skin seçimini yapıp **Apply** kullan. Seçimleri saklamak için **Save profile** kullan.
+### Önerilen yöntem: Windows Setup (v1.0.1 ve sonrası)
 
-**Örnek Release klasörü:**
+1. **[GitHub Releases](https://github.com/TheMasiva/MasivaSkin/releases)** sayfasını aç. En son **kararlı** sürümün notlarını, desteklediği CS2 sürümünü ve bilinen sınırlamaları oku.
+2. **Assets** bölümünden **`MasivaSkinSetup.exe`** dosyasını indir. GitHub'ın otomatik sunduğu *Source code* ZIP'i kurulum dosyası değildir. Yalnızca projenin resmî Release sayfasındaki kurucuyu kullan.
+3. **CS2'yi ve eski Masiva Skin'i tamamen kapat.** Kurucuyu normal şekilde aç; kendi Windows kullanıcı hesabın için kurulum yapar, normalde yönetici izni istemez.
+4. Uygulama `%LOCALAPPDATA%\MasivaSkin\App` klasörüne kurulur. Masaüstü ve Başlat menüsü kısayolları oluşturulur.
+5. **İlk kurulumda** eski taşınabilir sürümden ayar/profil aktarma seçeneği çıkabilir. İstersen eski klasörün `Masiva-Skin.ini` dosyasını seç; ayrıntılar aşağıda.
+6. Kısayoldan uygulamayı aç. Launcher, açılışta imzalı yeni sürüm kontrolü yapar. **Launch CS2**, oyunu mevcut Steam başlatma seçeneklerini değiştirmeden açar; **Explore menu** ise CS2'yi başlatmadan arayüze bakmanı sağlar.
+7. Oyun içi menü için **Pencereli Tam Ekran (Borderless)** veya **Pencereli** görüntü modunu kullan. Takım/eşya/skin seç, **Apply** ile uygula ve gerekiyorsa profilini kaydet.
 
-```text
-MasivaSkin/
-├── MasivaSkin.exe
-├── MasivaSkinBridge.dll
-├── Masiva-Skin.ini
-├── Explore-menu.cmd             # Oyun olmadan menü önizlemesi
-├── previews/
-├── README.md
-├── SHA256.txt                 # Varsa
-└── THIRD-PARTY-NOTICES/       # Varsa
-```
+> **Eski sürümlerden geçiş:** Taşınabilir v1.0.0 ve önceki sürümler kendiliğinden otomatik güncelleme kazanmaz. Kurulumlu sisteme geçmek için **v1.0.1 veya daha yeni `MasivaSkinSetup.exe` dosyasını bir kez çalıştırman gerekir**. Ayrı sunulan eski taşınabilir sürümler kendi Release notlarına göre elle güncellenir.
 
-> ZIP içinden doğrudan EXE açma. Yalnızca EXE'yi başka klasöre kopyalamak, görsel veya DLL bulunamaması gibi hatalar oluşturabilir.
+### Eski profilleri ve ayarları taşıma
 
-### Yeni sürüme geçiş
+- İlk kurulumdaki içe aktarma penceresinde tek tek `.masiva` dosyası yerine eski taşınabilir klasöründeki **`Masiva-Skin.ini`** dosyasını seç.
+- Kurucu, mevcutsa ayarları, favorileri, son seçimleri ve eski `profiles/` klasöründeki dosyaları yeni `UserData` klasörüne **kopyalar**. Yeni klasörde zaten var olan dosyaların **üzerine yazmaz**, eski dosyaları **silmez**.
+- Farklı yerde sakladığın `.masiva` profilini **Profiles → Load profile** üzerinden kendin yükleyebilirsin.
+- Taşımadan önce önemli profilleri, ayarları ve `.bak1`–`.bak5` yedeklerini ayrı bir yere yedekle.
 
-- Önemli `.masiva` profillerini ve eski ayarlarını yedekle. Profillerin üzerine kayıtta `.bak1`–`.bak5` geçmişi oluşturulabilir; güncellemeden önce ayrıca harici bir kopya sakla.
-- CS2 ve uygulamayı kapat; yeni sürümü **temiz bir klasöre** çıkar.
-- **Load profile** ile kaydettiğin profili geri yükle.
-- Yeni sürümün Release notlarındaki uyumluluk ve profil bilgilerini kontrol et.
-- **Uyumluluk hotfix sürümleri hem EXE dosyasını hem Bridge DLL'i değiştirebilir.** Menü aynı görünse bile iki dosya aynı Release'ten gelmeli.
+### Otomatik güncelleme nasıl çalışıyor?
+
+- Program açıldığında GitHub'daki **en son kararlı Release** üzerinden `update.txt` ve `update.sig` okunur. Güncelleme bilgisinin imzası uygulamaya gömülü **açık doğrulama anahtarıyla** denetlenir (RSA-3072 / SHA-256).
+- Daha yeni sürüm varsa ve **CS2 kapalıysa**, yeni `MasivaSkinSetup.exe` indirilir. Kurucu dosyasının **SHA256** değeri imzalı güncelleme bilgisindeki değerle karşılaştırılır.
+- Eski program kapanır; kurucu kapanmasını bekleyip program dosyalarını günceller. **Ayar ve profiller `UserData` içinde korunur.** Kurulum sırasında CS2 de kapalı olmalıdır.
+- GitHub'a ulaşılamazsa, imza geçersizse veya indirme yarıda kalırsa kurulu sürüm korunur. **Kontrol uygulama açılışında yapılır; arka planda sürekli tarama yapılmaz.** CS2 zaten açıksa yeni kurulum sonraki açılışa ertelenir.
+- Bu dijital imza güncellemenin gerçekten proje anahtarıyla imzalandığını doğrular; **Windows kod imzalama sertifikası değildir**. SmartScreen uyarılarını ortadan kaldırmaz, VAC ya da hesap güvenliği garantisi vermez.
+
+### Kurulum klasörleri ve kaldırma
+
+| Konum | İçerik |
+| --- | --- |
+| `%LOCALAPPDATA%\MasivaSkin\App` | Program, aynı sürüme ait Bridge DLL, görseller ve diğer uygulama kaynakları. |
+| `%LOCALAPPDATA%\MasivaSkin\UserData` | Kalıcı ayarlar, profiller, favoriler, son seçimler ve güncelleme günlüğü. |
+| `%LOCALAPPDATA%\MasivaSkin\Updates` | İndirilen yeni kurulum dosyaları. |
+| `%LOCALAPPDATA%\MasivaSkin\Previous` | Güncelleme sırasında saklanan önceki kurulum yedeği. |
+
+Kaldırmak için **Windows Ayarları → Uygulamalar → Yüklü uygulamalar → Masiva Skin → Kaldır** yolunu kullan (Windows sürümüne göre isimler değişebilir). Kaldırıcı **`UserData` klasörünü bilerek silmez**. Önce verilerini yedekledikten sonra bu klasörü istersen elle silebilirsin. Küçük bakım programı da elle temizlenene kadar kalabilir.
+
+### Geliştirici için: imzalı güncelleme yayımlamak
+
+Her yeni **kararlı** sürümde (örneğin `v1.0.2`):
+
+1. Program, kurulum dosyaları ve derleme ayarlarındaki sürüm numaralarını güncelle. Yeni Windows x64 programını ve **`MasivaSkinSetup.exe`** kurucusunu derle ve test et.
+2. **Son hâline gelmiş, sonradan değiştirilmeyecek** kurucuyu v1.0.1'deki **aynı özel imzalama anahtarıyla** imzala. Kaynak klasöründe Python ve `cryptography` paketi kuruluysa örneğin:
+
+   ```powershell
+   python tools/sign_release.py 1.0.2 MasivaSkinSetup.exe update-signing-key.pem release-1.0.2
+   ```
+
+3. Güncel kaynak kodlarını GitHub'a gönder, **`v1.0.2`** Release'ini aç, **Latest** olarak yayımla (Draft/Pre-release değil). Release Assets kısmına isimleri değişmeden **üç ayrı dosya** yükle: `MasivaSkinSetup.exe`, `update.txt`, `update.sig`. Elle doğrulama için ayrıca `SHA256.txt` ekleyebilirsin.
+4. İmzaladıktan sonra kurucuyu değiştirme! Her yeni sürümde **aynı özel anahtarı** koru; özel anahtarı, ZIP yedeğini veya PEM dosyasını **asla GitHub'a yükleme**. Açık doğrulama anahtarı programda bulunabilir.
+5. Geniş kitleye duyurmadan önce gerçek Windows sisteminde kurulu **v1.0.1 → v1.0.2** güncellemesini, profil korunmasını ve hatalı güncellemeden dönüşü test et.
+
+Updater `releases/latest/download/update.txt`, `releases/latest/download/update.sig` ve `releases/download/vX.Y.Z/MasivaSkinSetup.exe` adreslerini bekler. GitHub'daki `src/`, `tools/` ve `tests/` klasörleri geliştiriciler içindir; **otomatik güncelleme bunları indirip derlemez**. Özel anahtar hiçbir Git commit'ine girmemelidir.
 
 ## Hızlı kullanım tablosu
 
@@ -404,7 +467,9 @@ MasivaSkin/
 | **Recent skins** | Başarıyla gönderilmiş son 20 farklı görünümden seçim yapar; tek başına uygulamaz. |
 | **Save profile / Load profile** | `.masiva` profili kaydeder/yükler. |
 | **Menu & Theme Colour** | Bağımsız ana zemin ve vurgu renkleri, tema paleti, opaklık ve menü boyutu. |
-| **Explore-menu.cmd** | Oyun bağlantısı olmadan `--preview` modunda menüyü açar. |
+| **Explore menu (launcher)** | CS2 açmadan menüyü önizler. Eski taşınabilir dağıtımlarda `Explore-menu.cmd` bulunabilir. |
+| **Launcher → General** | Açılışta gizleme, isteğe bağlı Discord Rich Presence paylaşımı ve uygulama dili. |
+| **Launcher → In Game Window** | Oyun içi menü opaklığı, boyutu, vurgu rengi ve tema ayarları. |
 | **Language** | Ayarlar → Genel → Dil: Türkçe, English, Deutsch, Русский, Nederlands veya Français. |
 | **Ayarlar** | Tema, vurgu rengi, dil, menü tuşu, opaklık, boyut ve tanılama. |
 | **Log / diagnostics** | Hata ayrıntıları ve tanı raporu. |
@@ -414,7 +479,7 @@ MasivaSkin/
 
 **Both hakkında:** Yalnızca iki takımın ortak kullanabildiği uyumlu eşyalar içindir. Both sekmesine geçmek tek başına ayar uygulamaz; **Apply** veya profil kaydı gerekir. Diğer taraftaki görünüm, eşya tekrar kuşanıldığında güncellenebilir. Ajanlar ve tek takıma özel silahlar ayrı ayarlanır.
 
-Menü teması ve tuş gibi ayarlar genellikle `Masiva-Skin.ini` dosyasında, kozmetik seçimler `.masiva` profilinde tutulur. Bu dağıtımda Discord Rich Presence varsayılan kapalıdır. Standart Windows dosya/renk seçicileri ana pencere dışında açılabilir.
+Kurulumlu sürümde `Masiva-Skin.ini` ayarları ve `.masiva` profil dosyaları `%LOCALAPPDATA%\MasivaSkin\UserData` klasöründe, program dosyalarından ayrı tutulur. Discord Rich Presence isteğe bağlıdır ve Launcher → General üzerinden ayarlanabilir. Standart Windows dosya/renk seçicileri ana pencere dışında açılabilir.
 
 ## Bilinen sınırlamalar
 
@@ -486,6 +551,14 @@ Sorun sürerse **Log / diagnostics → Diagnostic report** ile rapor al ve hata 
 
 Masiva Skin'i kapatıp CS2'nin tek başına düzgün çalıştığını kontrol et. Aynı sürümden dosyalar kullandığından emin ol; birden fazla oyun modifikasyon aracını aynı anda çalıştırmaktan kaçın. **Windows Olay Görüntüleyicisi** ve uygulama tanı raporunu incele. Çökmeler tekrarlanıyorsa o derlemeyi kullanmayı bırak.
 
+### 7. Otomatik güncelleme kontrolü hata veriyor veya erteleniyor
+
+- **Kurulu v1.0.1 veya daha yeni sürümü** kullandığından emin ol. Eski taşınabilir sürümler otomatik güncellenmez. En son kararlı Release altında isimleri birebir aynı `update.txt`, `update.sig`, `MasivaSkinSetup.exe` dosyalarının olduğunu kontrol et.
+- GitHub'a erişilebildiğinden emin ol. İnternet veya güncelleme kontrolü başarısız olursa mevcut program kullanılabilir kalmalıdır. Güncelleme zorlamak için Windows güvenlik korumalarını kapatma.
+- **CS2'yi ve Masiva Skin'i tamamen kapatıp** programı yeniden aç. CS2 açıkken güncelleme kurulmaz.
+- İmza veya SHA256 doğrulaması başarısızsa **kontrolü atlatmaya çalışma**. Resmî Release sayfasından yeni Setup'ı kendin indir ve hatayı Discord veya GitHub Issues üzerinden bildir.
+- Kurulum hatasında varsa `%LOCALAPPDATA%\MasivaSkin\UserData\update.log` kaydına bak. Önceki program yedeği bulunabilir; ancak yeni program açıldıktan sonraki çökmeleri otomatik fark eden bir sağlık kontrolü henüz yoktur.
+
 ### Hata nasıl bildirilir?
 
 [GitHub Issues](https://github.com/TheMasiva/MasivaSkin/issues) (açıksa) veya **[Discord topluluğumuzdaki](https://discord.gg/V8ZGrrVwym) hata bildirimi/destek kanallarında** şu bilgileri paylaş:
@@ -506,17 +579,17 @@ Kaynak kodun ana klasöründe:
 build-windows.cmd
 ```
 
-Betik **x64 Release** derlemesini hazırlar ve testleri çalıştırır. Derleme işlemi değişirse depodaki güncel betik ve ilgili Release notları esas alınır. Otomatik testlerin geçmesi, canlı CS2 uyumluluğunu garanti etmez.
+Betik **x64 Release** derlemesini hazırlar ve testleri çalıştırır; kurulum EXE'sinin paketlenmesi için ilgili sürümün derleme notlarına bak. **Derleme ile imzalı güncelleme yayımlamak aynı şey değildir:** `tools/sign_release.py`, genel depoda bulunmaması gereken özel imzalama anahtarıyla çalışır. Testlerin geçmesi gerçek CS2 uyumluluğunu veya uçtan uca kurulum/güncelleme testini garanti etmez.
 
 ## Dosya doğrulama, lisanslar ve sorumluluk reddi
 
-- Release yanında `.sha256` dosyası verilmişse, Windows PowerShell ile ZIP'in hash değerini kontrol et:
+- Kurulumlu sürümde **Setup EXE** dosyasının SHA256 değerini Release altında yayımlanan değerle (veya `SHA256.txt` ile) PowerShell üzerinden kontrol edebilirsin:
 
   ```powershell
-  Get-FileHash .\YOUR_DOWNLOADED_RELEASE.zip -Algorithm SHA256
+  Get-FileHash .\MasivaSkinSetup.exe -Algorithm SHA256
   ```
 
-  Çıktıyı yayımlanan checksum ile karşılaştır. Bu, dosyanın belirtilen hash ile eşleştiğini gösterir; **yazılımın güvenli veya Valve onaylı olduğunu kanıtlamaz**.
+  Sonucu **aynı sürümün** yayımlanmış SHA256 değeriyle karşılaştır. Hash eşleşmesi yalnızca dosya bütünlüğüne yardımcı olur; **zararlı yazılım bulunmadığını, VAC uyumluluğunu veya Valve onayını garanti etmez**.
 - **Kaynak kod lisansı:** Projenin özgün kaynak kodu şu anda **proje lisansı olmadan** (`No license`) yayımlanmaktadır. Deponun herkese açık olması, kanunen veya platform şartları kapsamında zaten var olan haklar dışında kodu kopyalama, değiştirme, yeniden dağıtma ya da başka projelerde kullanma izni vermez. Daha sonra bir proje lisansı eklenebilir.
 - Üçüncü taraf bağımlılıkların bildirimleri [`third_party/`](third_party/) veya Release içindeki `THIRD-PARTY-NOTICES/` klasöründedir. Bu bileşenler kendi lisanslarına tabidir. Metadata lisansları Valve/Workshop görsellerinin telif haklarını devretmez.
 - Masiva Skin, Valve'dan bağımsızdır. Valve'ın oyun DLL dosyaları Release paketine **dahil edilmez**.
